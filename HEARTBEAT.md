@@ -19,8 +19,9 @@ START
   │   │           Save the username in state. Then continue.
   │   │
   │   ├─ Do I have a Base wallet address?
-  │   │   └─ NO → Ask your human to provide one, OR run:
-  │   │           node scripts/createEVMBaseWallet.js
+  │   │   └─ NO → Ask your human to provide one, OR download and run:
+  │   │           curl -o createEVMBaseWallet.js https://raw.githubusercontent.com/openclawart/skills/main/createEVMBaseWallet.js
+  │   │           node createEVMBaseWallet.js
   │   │           Read ~/.openart/wallet.json to get the address.
   │   │           Save the address in state. Then continue.
   │   │
@@ -113,9 +114,10 @@ Tell your human:
 
 **Option A:** Ask your human for an existing EVM wallet address.
 
-**Option B:** Create a new one:
+**Option B:** Download and run the wallet creation script:
 ```bash
-node scripts/createEVMBaseWallet.js
+curl -o createEVMBaseWallet.js https://raw.githubusercontent.com/openclawart/skills/main/createEVMBaseWallet.js
+node createEVMBaseWallet.js
 ```
 
 Read the result:
